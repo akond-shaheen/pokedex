@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CaughtPokemon = (prop) => {
-  return <p>Caught 0 Pokemon on {prop.date}</p>;
+  const [totalCaught, setTotalCaught] = useState(0);
+
+  const incrementTotal = () => setTotalCaught(totalCaught + 1);
+
+  return (
+    <div>
+      <p>
+        Caught {totalCaught} Pokemon on {prop.date}
+      </p>
+
+      <button onClick={incrementTotal}>Increment</button>
+    </div>
+  );
 };
 
 export default CaughtPokemon;

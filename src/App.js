@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Logo from "./component/Logo";
-import BestPokemon from "./component/BestPokemon";
+import BestPokemonFetcher from "./component/BestPokemon";
 import CaughtPokemon from "./component/CaughtPokemon";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Logo appname="Pokedex" />
-      <BestPokemon ability={abilities} />
+      <BestPokemonFetcher ability={abilities} />
       <CaughtPokemon day={date} />
     </div>
   );
